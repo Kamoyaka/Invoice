@@ -1,0 +1,60 @@
+.invoice-container {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 28px;
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.2);
+  max-width: 1050px; /* Increased max-width for wider content */
+  width: 95%;
+  min-width: 720px; /* Minimum width to prevent squishing */
+  margin: 20px auto 40px auto;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  overflow-x: auto; /* Scroll horizontally on smaller screens */
+}
+
+/* Table and columns spacing */
+.invoice-body table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px; /* Ensure table stays wide enough */
+  table-layout: fixed; /* Fix column widths for alignment */
+}
+
+.invoice-body thead th {
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: left;
+  white-space: nowrap; /* Prevent wrapping in headings */
+}
+
+.invoice-body tbody td {
+  padding-left: 15px;
+  padding-right: 15px;
+  white-space: nowrap; /* Prevent wrapping in cell content */
+}
+
+/* Specific column widths to balance layout */
+.invoice-body thead th:nth-child(1), /* Product */
+.invoice-body tbody td:nth-child(1) {
+  width: 35%;
+}
+
+.invoice-body thead th:nth-child(2), /* Unit */
+.invoice-body tbody td:nth-child(2) {
+  width: 15%;
+}
+
+.invoice-body thead th:nth-child(3), /* Price */
+.invoice-body tbody td:nth-child(3) {
+  width: 15%;
+}
+
+.invoice-body thead th:nth-child(4), /* Amount */
+.invoice-body tbody td:nth-child(4) {
+  width: 20%;
+}
+
+.invoice-body thead th:nth-child(5), /* Action */
+.invoice-body tbody td:nth-child(5) {
+  width: 15%;
+  text-align: right;
+}
